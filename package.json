@@ -16,9 +16,11 @@
     "*.{js,jsx,ts,tsx,mjs,cjs}": "eslint --fix --max-warnings=0"
   },
   "dependencies": {
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.577.0",
     "next": "16.1.6",
+    "radix-ui": "^1.4.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "tailwind-merge": "^3.5.0"
@@ -35,6 +37,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import-x": "^4.16.2",
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-sonarjs": "^4.0.2",
     "husky": "^9.1.7",

@@ -52,8 +52,81 @@
   --color-foreground: var(--foreground);
 }
 
+@theme {
+  /* Surface colors */
+  --color-pn-base: #0d0f18;
+  --color-pn-surface: #141620;
+  --color-pn-card: #1e2236;
+  --color-pn-card-hover: #191c2e;
+  --color-pn-border: #252a42;
+
+  /* Brand & accent colors */
+  --color-pn-brand: #d4962b;
+  --color-pn-brand-hover: #e5a83c;
+  --color-pn-brand-active: #c0871f;
+  --color-pn-tenant: #4f85ff;
+
+  /* Foreground colors */
+  --color-pn-fg: #edeae0;
+  --color-pn-fg-muted: #5e6276;
+  --color-pn-fg-dim: #454a5c;
+  --color-pn-fg-ghost: #3a3f55;
+  --color-pn-fg-faint: #2e3250;
+
+  /* Font sizes */
+  --text-pn-display: 42px;
+  --text-pn-title: 22px;
+  --text-pn-body: 15px;
+  --text-pn-sm: 13px;
+  --text-pn-label: 11px;
+  --text-pn-badge: 10px;
+
+  /* Line height */
+  --leading-pn-tight: 1.12;
+
+  /* Spacing / sizing */
+  --spacing-pn-bar: 3px;
+  --spacing-pn-desc: 300px;
+  --spacing-pn-form: 420px;
+  --spacing-pn-ring: 480px;
+  --spacing-pn-aside: 44%;
+  --spacing-pn-aside-xl: 48%;
+
+  /* Letter spacing */
+  --tracking-pn-brand: 0.18em;
+
+  /* Blur */
+  --blur-pn-glow: 80px;
+
+  /* Opacity */
+  --opacity-pn-dots: 0.035;
+
+  /* Animation */
+  --animate-fade-slide-up: fadeSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-sora, ui-sans-serif);
+  }
+  .font-body {
+    font-family: var(--font-dm-sans, ui-sans-serif);
+  }
 }

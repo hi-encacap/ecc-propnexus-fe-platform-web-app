@@ -1,0 +1,27 @@
+{
+	"servers": {
+		"next-devtools": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"next-devtools-mcp@0.3.10"
+			],
+			"cwd": "${input:cwd}",
+			"sandboxEnabled": false,
+			"envFile": "${input:env}",
+			"type": "stdio"
+		}
+	},
+	"inputs": [
+		{
+			"id": "cwd",
+			"type": "promptString",
+			"description": "What is the working directory for the server command?"
+		},
+		{
+			"id": "env",
+			"type": "promptString",
+			"description": "What environment variables should be passed to the server?"
+		}
+	]
+}
